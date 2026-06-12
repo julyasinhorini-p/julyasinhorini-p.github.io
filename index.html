@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigiô Semijoias</title>
+    <link rel="stylesheet" href="gigio_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ======================================================
+         ANÚNCIO
+    ====================================================== -->
+    <div class="anuncio-bar" aria-label="Frete grátis para o Brasil">
+        <div class="anuncio-track">
+            <span>✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil</span>
+            <span aria-hidden="true">✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil &nbsp;&nbsp;&nbsp;&nbsp; ✦ Frete grátis para o Brasil</span>
+        </div>
+    </div>
+
+    <!-- ======================================================
+         LOGO BAR
+    ====================================================== -->
+    <header class="logo-bar">
+        <img src="imagens/logo.png" alt="Gigiô Semijoias">
+    </header>
+
+    <!-- ======================================================
+         NAV
+    ====================================================== -->
+    <nav>
+
+        <!-- Botão hambúrguer (visível só no mobile) -->
+        <button class="nav-hamburguer" id="nav-hamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+
+            <li>
+                <a href="#historia">Nossa História</a>
+            </li>
+
+            <li>
+                <a href="#revendedora">Seja uma Revendedora</a>
+            </li>
+
+            <li>
+                <a href="#corrente-grumet-simples-dourada">Correntes Simples ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#corrente-grumet-simples-dourada">Corrente Grumet Simples — Dourada</a></li>
+                    <li><a href="#corrente-grumet-simples-prata">Corrente Grumet Simples — Prata</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#corrente-grumet-dupla-dourada">Correntes Dupla ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#corrente-grumet-dupla-dourada">Corrente Grumet Dupla — Dourada</a></li>
+                    <li><a href="#corrente-grumet-dupla-prata">Corrente Grumet Dupla — Prata</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#pulseira-grumet-simples-dourada">Pulseiras Simples ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#pulseira-grumet-simples-dourada">Pulseira Grumet Simples — Dourada</a></li>
+                    <li><a href="#pulseira-grumet-simples-prata">Pulseira Grumet Simples — Prata</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#pulseira-grumet-dupla-dourada">Pulseiras Dupla ▾</a>
+                <ul class="dropdown">
+                    <li><a href="#pulseira-grumet-dupla-dourada">Pulseira Grumet Dupla — Dourada</a></li>
+                    <li><a href="#pulseira-grumet-dupla-prata">Pulseira Grumet Dupla — Prata</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+        <div class="nav-social">
+
+            <button class="btn-carrinho-nav" id="btn-abrir-carrinho" aria-label="Abrir carrinho">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="carrinho-badge" id="carrinho-badge">0</span>
+            </button>
+
+            <a
+                class="btn-whatsapp-nav"
+                href="https://wa.me/5517997669007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais"
+                target="_blank"
+                rel="noopener"
+                aria-label="Fale conosco pelo WhatsApp"
+            >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Fale Conosco
+            </a>
+
+            <a
+                class="btn-insta"
+                href="https://www.instagram.com/semijoiasgigio_/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram da Gigiô Semijoias"
+            >
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ======================================================
+         HERO — INÍCIO
+    ====================================================== -->
+    <section id="inicio">
+        <img src="imagens/fundo1.png" alt="Gigiô Semijoias">
+    </section>
+
+
+    <!-- ======================================================
+         NOSSA HISTÓRIA
+    ====================================================== -->
+    <section id="historia">
+
+        <div class="secao">
+
+            <div class="historia-inner">
+
+                <div class="historia-texto">
+
+                    <p class="secao-subtitulo" style="text-align:left; margin-bottom:0.5rem;">
+                        Nossa História
+                    </p>
+
+                    <h2 style="font-size:2rem; margin-bottom:1.75rem; line-height:1.35;">
+                        Nascida da paixão<br><em>pelo que é belo</em>
+                    </h2>
+
+                    <p>
+                        A Gigiô Semijoias nasceu do desejo de levar elegância e sofisticação para o dia a dia de cada mulher. Acreditamos que beleza não precisa de rótulo de preço — ela vive nos detalhes, no brilho certo, na peça que completa um olhar.
+                    </p>
+
+                    <p>
+                        Cada peça da nossa coleção é selecionada com cuidado, pensando em quem usa e no que sente. Trabalhamos com semijoias de qualidade, que combinam o encanto do ouro e da prata com a leveza de quem sabe o que quer.
+                    </p>
+
+                    <p>
+                        Mais do que joias, entregamos histórias. Cada corrente, cada pulseira, cada detalhe tem o propósito de fazer você se sentir única.
+                    </p>
+
+                </div>
+
+                <div class="historia-ornamento">
+                    <div class="historia-foto-slot">
+                        <img src="imagens/logo1.png" alt="Gigiô Semijoias">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         SEJA UMA REVENDEDORA
+    ====================================================== -->
+    <section id="revendedora">
+
+        <div class="secao">
+
+            <p class="secao-subtitulo">Oportunidade</p>
+            <h2 class="secao-titulo">Seja uma Revendedora</h2>
+            <div class="divisor"></div>
+
+            <p class="revendedora-texto">
+                Confiamos no potencial de cada mulher. Por isso, oferecemos um modelo de parceria gentil e progressivo — você começa com uma maleta curada, recebe as peças em consignação e só repassa o valor após as vendas. Sem risco, sem pressão. Apenas o prazer de vender o que é bonito e ganhar com isso.
+            </p>
+
+            <p class="revendedora-texto">
+                Conforme você se destaca, sua maleta cresce — em tamanho, em variedade, em possibilidades. É uma jornada de conquistas construída no seu ritmo, com o suporte que você merece.
+            </p>
+
+            <!-- Faixas de comissão -->
+            <div class="comissao-grid">
+
+                <div class="comissao-card">
+                    <div class="comissao-pct">20%</div>
+                    <div class="comissao-faixa">até R$ 999 em vendas</div>
+                    <p class="comissao-desc">
+                        O ponto de partida para quem está começando. Uma comissão justa para você dar os primeiros passos com confiança e tranquilidade.
+                    </p>
+                </div>
+
+                <div class="comissao-card destaque">
+                    <div class="comissao-pct">30%</div>
+                    <div class="comissao-faixa">de R$ 1.000 a R$ 1.999</div>
+                    <p class="comissao-desc">
+                        Para quem encontrou o ritmo e está crescendo. Suas vendas se refletem diretamente nos seus ganhos — um reconhecimento que você conquista.
+                    </p>
+                </div>
+
+                <div class="comissao-card">
+                    <div class="comissao-pct">40%</div>
+                    <div class="comissao-faixa">acima de R$ 2.000</div>
+                    <p class="comissao-desc">
+                        Para nossas parceiras de destaque. Quem se dedica merece ganhar mais — e nós acreditamos nisso com cada peça que entregamos.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Maletas -->
+            <h3 class="maletas-titulo">Nossas Maletas</h3>
+
+            <p class="revendedora-texto" style="margin-top: 0.75rem;">
+                As maletas acompanham o seu crescimento — aumentando em tamanho e variedade conforme você vai se destacando. Porque quem vende mais merece ter mais opções para oferecer.
+            </p>
+
+            <div class="maletas-grid">
+
+                <div class="maleta-slot" id="slot-maleta-1">
+                    <svg viewBox="0 0 24 24" stroke-width="1" aria-hidden="true">
+                        <rect x="3" y="6" width="18" height="14" rx="2" ry="2"/>
+                        <path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                        <line x1="12" y1="11" x2="12" y2="17"/>
+                        <line x1="9" y1="14" x2="15" y2="14"/>
+                    </svg>
+                    <span class="maleta-label">Adicionar foto — Maleta 1</span>
+                    <input type="file" accept="image/*" aria-label="Foto da maleta 1">
+                </div>
+
+                <div class="maleta-slot" id="slot-maleta-2">
+                    <svg viewBox="0 0 24 24" stroke-width="1" aria-hidden="true">
+                        <rect x="3" y="6" width="18" height="14" rx="2" ry="2"/>
+                        <path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/>
+                        <line x1="12" y1="11" x2="12" y2="17"/>
+                        <line x1="9" y1="14" x2="15" y2="14"/>
+                    </svg>
+                    <span class="maleta-label">Adicionar foto — Maleta 2</span>
+                    <input type="file" accept="image/*" aria-label="Foto da maleta 2">
+                </div>
+
+            </div>
+
+            <div class="revendedora-cta">
+                <a
+                    class="btn-revendedora"
+                    href="https://wa.me/5517997669007?text=Ol%C3%A1%2C%20gostaria%20de%20ser%20uma%20revendedora"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Quero ser revendedora
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+         CORRENTE GRUMET SIMPLES — DOURADA
+    ====================================================== -->
+    <section class="colecao-section" id="corrente-grumet-simples-dourada">
+        <div class="colecao-inner">
+
+            <p class="colecao-subtitulo">Coleção</p>
+            <h2 class="colecao-titulo">Corrente Grumet Simples — Dourada</h2>
+            <div class="colecao-divisor"></div>
+
+            <div class="col-controls" role="group" aria-label="Número de colunas">
+                <button class="col-btn" onclick="setCols(this, 'grade-cgs-d', 2)">2 colunas</button>
+                <button class="col-btn ativo" onclick="setCols(this, 'grade-cgs-d', 3)">3 colunas</button>
+                <button class="col-btn" onclick="setCols(this, 'grade-cgs-d', 4)">4 colunas</button>
+            </div>
+
+            <div class="foto-grid" id="grade-cgs-d" data-cols="3"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         CORRENTE GRUMET SIMPLES — PRATA
+    ====================================================== -->
+    <section class="colecao-section" id="corrente-grumet-simples-prata">
+        <div class="colecao-inner">
+
+            <p class="colecao-subtitulo">Coleção</p>
+            <h2 class="colecao-titulo">Corrente Grumet Simples — Prata</h2>
+            <div class="colecao-divisor"></div>
+
+            <div class="col-controls" role="group" aria-label="Número de colunas">
+                <button class="col-btn" onclick="setCols(this, 'grade-cgs-p', 2)">2 colunas</button>
+                <button class="col-btn ativo" onclick="setCols(this, 'grade-cgs-p', 3)">3 colunas</button>
+                <button class="col-btn" onclick="setCols(this, 'grade-cgs-p', 4)">4 colunas</button>
+            </div>
+
+            <div class="foto-grid" id="grade-cgs-p" data-cols="3"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         CORRENTE GRUMET DUPLA — DOURADA
+    ====================================================== -->
+    <section class="colecao-section" id="corrente-grumet-dupla-dourada">
+        <div class="colecao-inner">
+
+            <p class="colecao-subtitulo">Coleção</p>
+            <h2 class="colecao-titulo">Corrente Grumet Dupla — Dourada</h2>
+            <div class="colecao-divisor"></div>
+
+            <div class="col-controls" role="group" aria-label="Número de colunas">
+                <button class="col-btn" onclick="setCols(this, 'grade-cgd-d', 2)">2 colunas</button>
+                <button class="col-btn ativo" onclick="setCols(this, 'grade-cgd-d', 3)">3 colunas</button>
+                <button class="col-btn" onclick="setCols(this, 'grade-cgd-d', 4)">4 colunas</button>
+            </div>
+
+            <div class="foto-grid" id="grade-cgd-d" data-cols="3"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         CORRENTE GRUMET DUPLA — PRATA
+    ====================================================== -->
+    <section class="colecao-section" id="corrente-grumet-dupla-prata">
+        <div class="colecao-inner">
+
+            <p class="colecao-subtitulo">Coleção</p>
+            <h2 class="colecao-titulo">Corrente Grumet Dupla — Prata</h2>
+            <div class="colecao-divisor"></div>
+
+            <div class="col-controls" role="group" aria-label="Número de colunas">
+                <button class="col-btn" onclick="setCols(this, 'grade-cgd-p', 2)">2 colunas</button>
+                <button class="col-btn ativo" onclick="setCols(this, 'grade-cgd-p', 3)">3 colunas</button>
+                <button class="col-btn" onclick="setCols(this, 'grade-cgd-p', 4)">4 colunas</button>
+            </div>
+
+            <div class="foto-grid" id="grade-cgd-p" data-cols="3"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         PULSEIRA GRUMET SIMPLES — DOURADA
+    ====================================================== -->
+    <section class="colecao-section" id="pulseira-grumet-simples-dourada">
+        <div class="colecao-inner">
+
+            <p class="colecao-subtitulo">Coleção</p>
+            <h2 class="colecao-titulo">Pulseira Grumet Simples — Dourada</h2>
+            <div class="colecao-divisor"></div>
+
+            <div class="col-controls" role="group" aria-label="Número de colunas">
+                <button class="col-btn" onclick="setCols(this, 'grade-pgs-d', 2)">2 colunas</button>
+                <button class="col-btn ativo" onclick="setCols(this, 'grade-pgs-d', 3)">3 colunas</button>
+                <button class="col-btn" onclick="setCols(this, 'grade-pgs-d', 4)">4 colunas</button>
+            </div>
+
+            <div class="foto-grid" id="grade-pgs-d" data-cols="3"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         PULSEIRA GRUMET SIMPLES — PRATA
+    ====================================================== -->
+    <section class="colecao-section" id="pulseira-grumet-simples-prata">
+        <div class="colecao-inner">
+
+            <p class="colecao-subtitulo">Coleção</p>
+            <h2 class="colecao-titulo">Pulseira Grumet Simples — Prata</h2>
+            <div class="colecao-divisor"></div>
+
+            <div class="col-controls" role="group" aria-label="Número de colunas">
+                <button class="col-btn" onclick="setCols(this, 'grade-pgs-p', 2)">2 colunas</button>
+                <button class="col-btn ativo" onclick="setCols(this, 'grade-pgs-p', 3)">3 colunas</button>
+                <button class="col-btn" onclick="setCols(this, 'grade-pgs-p', 4)">4 colunas</button>
+            </div>
+
+            <div class="foto-grid" id="grade-pgs-p" data-cols="3"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         PULSEIRA GRUMET DUPLA — DOURADA
+    ====================================================== -->
+    <section class="colecao-section" id="pulseira-grumet-dupla-dourada">
+        <div class="colecao-inner">
+
+            <p class="colecao-subtitulo">Coleção</p>
+            <h2 class="colecao-titulo">Pulseira Grumet Dupla — Dourada</h2>
+            <div class="colecao-divisor"></div>
+
+            <div class="col-controls" role="group" aria-label="Número de colunas">
+                <button class="col-btn" onclick="setCols(this, 'grade-pgd-d', 2)">2 colunas</button>
+                <button class="col-btn ativo" onclick="setCols(this, 'grade-pgd-d', 3)">3 colunas</button>
+                <button class="col-btn" onclick="setCols(this, 'grade-pgd-d', 4)">4 colunas</button>
+            </div>
+
+            <div class="foto-grid" id="grade-pgd-d" data-cols="3"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         PULSEIRA GRUMET DUPLA — PRATA
+    ====================================================== -->
+    <section class="colecao-section" id="pulseira-grumet-dupla-prata">
+        <div class="colecao-inner">
+
+            <p class="colecao-subtitulo">Coleção</p>
+            <h2 class="colecao-titulo">Pulseira Grumet Dupla — Prata</h2>
+            <div class="colecao-divisor"></div>
+
+            <div class="col-controls" role="group" aria-label="Número de colunas">
+                <button class="col-btn" onclick="setCols(this, 'grade-pgd-p', 2)">2 colunas</button>
+                <button class="col-btn ativo" onclick="setCols(this, 'grade-pgd-p', 3)">3 colunas</button>
+                <button class="col-btn" onclick="setCols(this, 'grade-pgd-p', 4)">4 colunas</button>
+            </div>
+
+            <div class="foto-grid" id="grade-pgd-p" data-cols="3"></div>
+
+        </div>
+    </section>
+
+
+    <!-- ======================================================
+         FOOTER
+    ====================================================== -->
+    <footer>
+
+        <div class="footer-inner">
+
+            <div class="footer-grid">
+
+                <!-- Marca -->
+                <div class="footer-logo">
+                    <img src="imagens/logo.png" alt="Logo Gigiô Semijoias">
+                    <p>Semijoias com elegância, qualidade e propósito.<br>Cada peça conta uma história.</p>
+                </div>
+
+                <!-- Navegação -->
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#historia">Nossa História</a></li>
+                        <li><a href="#revendedora">Seja uma Revendedora</a></li>
+                        <li><a href="#corrente-grumet-simples-dourada">Correntes Simples</a></li>
+                        <li><a href="#corrente-grumet-dupla-dourada">Correntes Dupla</a></li>
+                        <li><a href="#pulseira-grumet-simples-dourada">Pulseiras Simples</a></li>
+                        <li><a href="#pulseira-grumet-dupla-dourada">Pulseiras Dupla</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p>
+                        <a
+                            href="https://wa.me/5517997669007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            (17) 99766-9007
+                        </a>
+                    </p>
+                    <br>
+                    <p>
+                        <a
+                            href="https://www.instagram.com/semijoiasgigio_/"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            @semijoiasgigio_
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Redes -->
+                <div class="footer-col">
+                    <h4>Redes Sociais</h4>
+                    <div class="footer-social">
+
+                        <a
+                            href="https://wa.me/5517997669007?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="WhatsApp"
+                        >
+                            <svg viewBox="0 0 24 24" fill="#25D366" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/semijoiasgigio_/"
+                            target="_blank"
+                            rel="noopener"
+                            aria-label="Instagram"
+                        >
+                            <svg viewBox="0 0 24 24" fill="#d4a84b" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Rodapé inferior -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gigiô Semijoias. Todos os direitos reservados.</p>
+                <p>Elegância que transforma</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ======================================================
+         CARRINHO
+    ====================================================== -->
+    <div class="carrinho-overlay" id="carrinho-overlay"></div>
+
+    <aside class="carrinho-panel" id="carrinho-panel" aria-label="Carrinho de compras">
+
+        <div class="carrinho-header">
+            <h3>Meu Carrinho</h3>
+            <button class="carrinho-fechar" id="carrinho-fechar" aria-label="Fechar carrinho">×</button>
+        </div>
+
+        <div class="carrinho-corpo">
+            <ul class="carrinho-lista" id="carrinho-lista"></ul>
+            <p class="carrinho-vazio" id="carrinho-vazio">Nenhum item adicionado ainda.</p>
+        </div>
+
+        <div class="carrinho-rodape">
+            <div class="carrinho-total-linha">
+                <span>Total</span>
+                <span id="carrinho-total">R$ 00,00</span>
+            </div>
+            <a class="btn-finalizar-wpp" id="btn-finalizar-wpp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Finalizar pelo WhatsApp
+            </a>
+        </div>
+
+    </aside>
+
+
+    <!-- ======================================================
+         SCRIPTS
+    ====================================================== -->
+    <script src="gigio_script.js"></script>
+
+</body>
+
+</html>
